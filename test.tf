@@ -3,6 +3,6 @@
    instance_type = "t3.micro"
    vpc_security_group_ids = [sg-043db02ec7e17c9ae]
    tags = {
-     Name = test""
+     Name = "test"
    }
  }
