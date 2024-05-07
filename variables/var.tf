@@ -1,3 +1,7 @@
+variable "sample" {
+  default = "Hello Anup"
+}
+
 output "sample" {
-  value = "Hello Anup"
+  value = "var.sample"
 }
