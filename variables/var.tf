@@ -17,12 +17,12 @@ output "sample1" {
 variable "input" {}
 
 variable "sample4" {
-  default = {
-           "Hello",
+  default = [
+    "Hello",
     1000,
     true,
     "Anup"
-  }
+  ]
 }
 variable "sample5" {
   default = {
