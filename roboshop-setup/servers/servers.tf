@@ -8,10 +8,10 @@ resource "aws_instance" "ec2" {
 }
 
 resource "aws_route53_record" "frontend" {
-  zone_id = Z024789331TA1ZYTI6SDI
+  zone_id = "Z024789331TA1ZYTI6SDI"
   name    = "frontend-dev.devop69.online"
   type    = "A"
-  ttl     = 300
+  ttl     = 30
   records = [aws_instance.frontend.private_ip]
 }
 ###
