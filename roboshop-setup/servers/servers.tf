@@ -1,5 +1,5 @@
 # Creating Dev frontend server
-resource "aws_spot_instance_request" "frontend" {
+resource "aws_instance" "frontend" {
   ami                    = "ami-0f3c7d07486cad139"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-043db02ec7e17c9ae"]
@@ -13,11 +13,11 @@ resource "aws_route53_record" "frontend" {
   name    = "frontend-dev.devop69.online"
   type    = "A"
   ttl     = 30
-  records = [aws_spot_instance_request.frontend.private_ip]
+  records = [aws_instance.frontend.private_ip]
 }
 # Creating Dev MongoDB server
 
-resource "aws_spot_instance_request" "mongodb" {
+resource "aws_instance" "mongodb" {
   ami                    = "ami-0f3c7d07486cad139"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-043db02ec7e17c9ae"]
@@ -31,12 +31,12 @@ resource "aws_route53_record" "mongodb" {
   name    = "mongodb-dev.devop69.online"
   type    = "A"
   ttl     = 30
-  records = [aws_spot_instance_request.mongodb.private_ip]
+  records = [aws_instance.mongodb.private_ip]
 }
 
 # Creating Dev Catalogue server
 
-resource "aws_spot_instance_request" "catalogue" {
+resource "aws_instance" "catalogue" {
   ami                    = "ami-0f3c7d07486cad139"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-043db02ec7e17c9ae"]
@@ -50,12 +50,12 @@ resource "aws_route53_record" "catalogue" {
   name    = "catalogue-dev.devop69.online"
   type    = "A"
   ttl     = 30
-  records = [aws_spot_instance_request.catalogue.private_ip]
+  records = [aws_instance.catalogue.private_ip]
 }
 
 # Creating Dev Redis Server
 
-resource "aws_spot_instance_request" "redis" {
+resource "aws_instance" "redis" {
   ami                    = "ami-0f3c7d07486cad139"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-043db02ec7e17c9ae"]
@@ -69,12 +69,12 @@ resource "aws_route53_record" "redis" {
   name    = "redis-dev.devop69.online"
   type    = "A"
   ttl     = 30
-  records = [aws_spot_instance_request.redis.private_ip]
+  records = [aws_instance.redis.private_ip]
 }
 
 #Creating Dev User Server
 
-resource "aws_spot_instance_request" "user" {
+resource "aws_instance" "user" {
   ami                    = "ami-0f3c7d07486cad139"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-043db02ec7e17c9ae"]
@@ -88,12 +88,12 @@ resource "aws_route53_record" "user" {
   name    = "user-dev.devop69.online"
   type    = "A"
   ttl     = 30
-  records = [aws_spot_instance_request.user.private_ip]
+  records = [aws_instance.user.private_ip]
 }
 
 # Creating Dev Cart Server
 
-resource "aws_spot_instance_request" "cart" {
+resource "aws_instance" "cart" {
   ami                    = "ami-0f3c7d07486cad139"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-043db02ec7e17c9ae"]
@@ -107,12 +107,12 @@ resource "aws_route53_record" "cart" {
   name    = "cart-dev.devop69.online"
   type    = "A"
   ttl     = 30
-  records = [aws_spot_instance_request.cart.private_ip]
+  records = [aws_instance.cart.private_ip]
 }
 
 # Creating DEv Shipping Server
 
-resource "aws_spot_instance_request" "shipping" {
+resource "aws_instance" "shipping" {
   ami                    = "ami-0f3c7d07486cad139"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-043db02ec7e17c9ae"]
@@ -126,12 +126,12 @@ resource "aws_route53_record" "shipping" {
   name    = "shipping-dev.devop69.online"
   type    = "A"
   ttl     = 30
-  records = [aws_spot_instance_request.shipping.private_ip]
+  records = [aws_instance.shipping.private_ip]
 }
 
 # Creating Dev mySQL Server
 
-resource "aws_spot_instance_request" "mysql" {
+resource "aws_instance" "mysql" {
   ami                    = "ami-0f3c7d07486cad139"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-043db02ec7e17c9ae"]
@@ -145,12 +145,12 @@ resource "aws_route53_record" "mysql" {
   name    = "mysql-dev.devop69.online"
   type    = "A"
   ttl     = 30
-  records = [aws_spot_instance_request.mysql.private_ip]
+  records = [aws_instance.mysql.private_ip]
 }
 
 # Creating Dev RabbitMQ Server
 
-resource "aws_spot_instance_request" "rabbitmq" {
+resource "aws_instance" "rabbitmq" {
   ami                    = "ami-0f3c7d07486cad139"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-043db02ec7e17c9ae"]
@@ -164,11 +164,11 @@ resource "aws_route53_record" "rabbitmq" {
   name    = "rabbitmq-dev.devop69.online"
   type    = "A"
   ttl     = 30
-  records = [aws_spot_instance_request.rabbitmq.private_ip]
+  records = [aws_instance.rabbitmq.private_ip]
 }
 # Creating Dev Payment Server
 
-resource "aws_spot_instance_request" "payment" {
+resource "aws_instance" "payment" {
   ami                    = "ami-0f3c7d07486cad139"
   instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-043db02ec7e17c9ae"]
@@ -182,7 +182,7 @@ resource "aws_route53_record" "payment" {
   name    = "mongodb-dev.devop69.online"
   type    = "A"
   ttl     = 30
-  records = [aws_spot_instance_request.payment.private_ip]
+  records = [aws_instance.payment.private_ip]
 }
 
 
